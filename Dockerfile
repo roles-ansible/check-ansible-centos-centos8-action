@@ -1,4 +1,4 @@
-FROM centos:centos8
+FROM centos:stream8
 
 LABEL "maintainer"="L3D <l3d@c3woc.de>"
 LABEL "repository"="https://github.com/roles-ansible/check-ansible-centos-centos8-action.git"
