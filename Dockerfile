@@ -9,13 +9,13 @@ LABEL "com.github.actions.description"="Check ansible role or playbook with Cent
 LABEL "com.github.actions.icon"="aperture"
 LABEL "com.github.actions.color"="green"
 
-RUN dnf update --assumeyes && dnf install -y epel-release
+# hadolint ignore=DL3041
+RUN dnf update --assumeyes \
+  && dnf install -y epel-release \
+  && dnf install --assumeyes \
+    ansible git \
+  && dnf clean all \
+  && ansible --version
 
-RUN dnf install --assumeyes \
-    ansible \
-    git
-
-RUN ansible --version
-
-ADD ansible-docker.sh /ansible-docker.sh
+COPY ansible-docker.sh /ansible-docker.sh
 ENTRYPOINT ["/ansible-docker.sh"]
