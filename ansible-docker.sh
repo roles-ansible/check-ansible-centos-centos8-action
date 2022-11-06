@@ -70,6 +70,7 @@ EOF
 }
 
 # make sure git is up to date
+git config --global --add safe.directory "${GITHUB_WORKSPACE}"
 git submodule update --init --recursive
 if [[ "${REQUIREMENTS}" == *.yml ]]
 then
@@ -78,7 +79,7 @@ else
   [ -n "${REQUIREMENTS}" ] && ansible-galaxy install "${REQUIREMENTS}"
 fi
 if [ "$0" = "${BASH_SOURCE[*]}" ] ; then
-  >&2 printf "Running Ansible debian check...\n"
+  >&2 printf "Running Ansible centos centos8 check...\n"
   ansible::prepare
   if [[ "${TARGETS}" == *.yml ]]
   then

@@ -1,3 +1,4 @@
+# hadolint ignore=DL3007
 FROM quay.io/centos/centos:stream8
 
 LABEL "maintainer"="L3D <l3d@c3woc.de>"
