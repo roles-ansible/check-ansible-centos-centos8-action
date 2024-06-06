@@ -9,6 +9,9 @@ LABEL "com.github.actions.description"="Check ansible role or playbook with Cent
 LABEL "com.github.actions.icon"="aperture"
 LABEL "com.github.actions.color"="green"
 
+COPY CentOS-Stream-EOL.repo /etc/yum.repos.d/CentOS-Stream-EOL.repo
+# hadolint ignore=SC2039
+RUN rm /etc/yum.repos.d/CentOS-Stream-{BaseOS,AppStream,Extras,Extras-common}.repo
 # hadolint ignore=DL3041
 RUN dnf update --assumeyes \
   && dnf install -y epel-release \

@@ -1,0 +1,54 @@
+# CentOS-Stream-BaseOS.repo
+
+[baseos-eol]
+name=CentOS Stream $releasever - BaseOS
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=BaseOS&infra=$infra
+#baseurl=http://mirror.centos.org/$contentdir/$stream/BaseOS/$basearch/os/
+baseurl=https://vault.centos.org/8-stream/BaseOS/$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
+# CentOS-Stream-AppStream.repo
+
+[appstream-eol]
+name=CentOS Stream $releasever - AppStream
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=AppStream&infra=$infra
+#baseurl=http://mirror.centos.org/$contentdir/$stream/AppStream/$basearch/os/
+baseurl=https://vault.centos.org/8-stream/AppStream/$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
+# CentOS-Stream-PowerTools.repo
+
+[powertools-eol]
+name=CentOS Stream $releasever - PowerTools
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=PowerTools&infra=$infra
+#baseurl=http://mirror.centos.org/$contentdir/$stream/PowerTools/$basearch/os/
+baseurl=https://vault.centos.org/8-stream/PowerTools/$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
+# CentOS-Stream-Extras.repo
+
+[extras]
+name=CentOS Stream $releasever - Extras
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=extras&infra=$infra
+#baseurl=http://mirror.centos.org/$contentdir/$stream/extras/$basearch/os/
+baseurl=https://vault.centos.org/8-stream/extras/$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
+# CentOS-Stream-Extras-common.repo
+
+[extras-common]
+name=CentOS Stream $releasever - Extras common packages
+#mirrorlist=http://mirrorlist.centos.org/?release=$stream&arch=$basearch&repo=extras-extras-common
+#baseurl=http://mirror.centos.org/$contentdir/$stream/extras/$basearch/extras-common/
+baseurl=https://vault.centos.org/8-stream/extras/$basearch/extras-common/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Extras
